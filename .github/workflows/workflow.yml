@@ -11,7 +11,7 @@ jobs:
 
   # Lint the Bicep file.
   lint:
-    uses: ./.github/workflows/lint.yml
+    uses: lint.yml@main
 
   # Deploy to the test environment.
   deploy-test:
