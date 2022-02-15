@@ -11,11 +11,11 @@ jobs:
 
   # Lint the Bicep file.
   lint:
-    uses: digresiv/toy-website-environments/.github/workflows/lint.yml@main
+    uses: /digresiv/toy-website-environments/blob/main/.github/workflows/lint.yaml@main
 
   # Deploy to the test environment.
   deploy-test:
-    uses: digresiv/toy-website-environments/.github/workflows/deploy.yml@main
+    uses: /digresiv/toy-website-environments/.github/workflows/deploy.yml@main
     needs: lint
     with:
       environmentType: Test
@@ -25,7 +25,7 @@ jobs:
 
   # Deploy to the production environment.
   deploy-production:
-    uses: digresiv/toy-website-environments/.github/workflows/deploy.yml@main
+    uses: /digresiv/toy-website-environments/.github/workflows/deploy.yml@main
     needs: deploy-test
     with:
       environmentType: Production
